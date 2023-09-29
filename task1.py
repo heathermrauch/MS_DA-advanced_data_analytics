@@ -69,8 +69,8 @@ print(f'Augmented Dickey-Fuller test:\n{adf_df.to_string()}\n')
 # Split the pre-differenced data saving last month for test
 df_train = df.loc[:'2021-11-30']
 df_test = df.loc['2021-12-01':]
-df_train.to_csv(os.path.join(OUT, 'training_data.csv'))
-df_test.to_csv(os.path.join(OUT, 'testing_data.csv'))
+df_train.to_csv(os.path.join(OUT, 'Task1/training_data.csv'))
+df_test.to_csv(os.path.join(OUT, 'Task1/testing_data.csv'))
 
 # Check for seasonality
 detrend = df_train - df_train.rolling(180).mean()
